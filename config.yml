@@ -1,0 +1,6 @@
+dev:
+  password: ahblee
+  theme_id: "sandbox"
+  store: orionsupport-com-au.myshopify.com
+  ignore_files:
+    - config/settings_data.json
