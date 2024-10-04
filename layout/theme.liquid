@@ -13,14 +13,6 @@
         type="image/png"
         href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
-
-    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
-      <link
-        rel="preconnect"
-        href="https://fonts.shopifycdn.com"
-        crossorigin>
-    {%- endunless -%}
-
     <title>
       {{ page_title }}
       {%- if current_tags %}
@@ -39,10 +31,10 @@
 
     {% render 'meta-tags' %}
     <meta name="author" content="linkmalloc.com">
-    <link rel="shortcut icon" href="{{ 'img/favicon.png' |  asset_url }}">
-    <link rel="stylesheet" href="{{ 'css/plugins.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'css/style.css' | asset_url }}">
-    <link rel="stylesheet" href="{{ 'css/colors/navy.css' | asset_url }}">
+    <link rel="shortcut icon" href="{{ 'favicon.png' |  asset_url }}">
+    <link rel="stylesheet" href="{{ 'plugins.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'navy.css' | asset_url }}">
 
   </head>
 
@@ -54,8 +46,8 @@
 
     {% render 'footer' %}
 
-    <script src="{{ 'js/plugins.js' | asset_url }}"></script>
-    <script src="{{ 'js/theme.js' | asset_url }}"></script>
+    <script src="{{ 'plugins.js' | asset_url }}"></script>
+    <script src="{{ 'theme.js' | asset_url }}"></script>
   </body>
 
 </html>
